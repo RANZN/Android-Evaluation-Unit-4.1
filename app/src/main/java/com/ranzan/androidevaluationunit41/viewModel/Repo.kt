@@ -54,6 +54,7 @@ class Repo(var context: Context) : ViewModel() {
         dataDAO.getData().observe(lifecycle, Observer {
             data = it
         })
+
         return data!!
     }
 }
