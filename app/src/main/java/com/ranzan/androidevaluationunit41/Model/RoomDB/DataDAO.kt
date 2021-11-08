@@ -10,10 +10,10 @@ import com.ranzan.androidevaluationunit41.Model.Response.Response
 @Dao
 interface DataDAO {
     @Insert
-    fun insertData(response: Response)
+    fun insertData(response: retrofit2.Response<Response>)
 
     @Update
-    fun updateData(response: Response)
+    fun updateData(response: retrofit2.Response<Response>)
 
     @Query("select * from ResponseDB")
     fun getData(): LiveData<Response>
