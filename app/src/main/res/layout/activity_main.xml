@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -25,59 +25,59 @@
         app:layout_constraintTop_toBottomOf="@id/imgPic" />
 
     <TextView
-        android:id="@+id/gender"
+        android:id="@+id/tvGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name" />
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender" />
+        app:layout_constraintTop_toBottomOf="@id/tvGender" />
 
     <TextView
-        android:id="@+id/city"
+        android:id="@+id/tvCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="city"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/email" />
+        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
 
     <TextView
-        android:id="@+id/country"
+        android:id="@+id/tvCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Coiuntry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/city" />
+        app:layout_constraintTop_toBottomOf="@id/tvCity" />
 
 
     <TextView
-        android:id="@+id/phone"
+        android:id="@+id/tvPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/country" />
+        app:layout_constraintTop_toBottomOf="@id/tvCountry" />
 
     <TextView
-        android:id="@+id/DOB"
+        android:id="@+id/tvDOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phone" />
+        app:layout_constraintTop_toBottomOf="@id/tvPhone" />
 
     <Button
         android:id="@+id/nextBtn"
@@ -88,6 +88,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/DOB" />
+        app:layout_constraintTop_toBottomOf="@id/tvDOB" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

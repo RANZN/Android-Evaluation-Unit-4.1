@@ -1,6 +1,8 @@
 package com.ranzan.androidevaluationunit41.viewModel
 
 import android.content.Context
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import com.ranzan.androidevaluationunit41.Model.Response.Network
 import com.ranzan.androidevaluationunit41.Model.Response.Response
@@ -43,5 +45,15 @@ class Repo(var context: Context) : ViewModel() {
             override fun onFailure(call: Call<Response>, t: Throwable) {
             }
         })
+    }
+
+    fun getData(lifecycle: LifecycleOwner): DataEntity {
+        mainDataBase = MainDataBase.getRoomDataBase(context)
+        dataDAO = mainDataBase.getDataDao()
+        var data: DataEntity? = null
+        dataDAO.getData().observe(lifecycle, Observer {
+            data = it
+        })
+        return data!!
     }
 }
