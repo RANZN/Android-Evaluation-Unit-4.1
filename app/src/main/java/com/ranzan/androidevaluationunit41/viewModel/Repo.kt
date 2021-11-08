@@ -8,6 +8,9 @@ import com.ranzan.androidevaluationunit41.Model.Response.getAPI
 import com.ranzan.androidevaluationunit41.Model.RoomDB.DataDAO
 import com.ranzan.androidevaluationunit41.Model.RoomDB.DataEntity
 import com.ranzan.androidevaluationunit41.Model.RoomDB.MainDataBase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 
@@ -32,7 +35,9 @@ class Repo(var context: Context) : ViewModel() {
                     list.email.toString(),
                     list.picture!!.large.toString()
                 )
-                dataDAO.insertData(data)
+                CoroutineScope(Dispatchers.IO).launch {
+                    dataDAO.insertData(data)
+                }
             }
 
             override fun onFailure(call: Call<Response>, t: Throwable) {
