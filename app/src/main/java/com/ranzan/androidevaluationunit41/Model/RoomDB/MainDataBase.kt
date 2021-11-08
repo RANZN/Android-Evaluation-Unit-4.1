@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.ranzan.androidevaluationunit41.Model.Response.Response
 
-@Database(entities = [Response::class], version = 1)
+@Database(entities = [DataEntity::class], version = 1)
 abstract class MainDataBase : RoomDatabase() {
 
     abstract fun getDataDao(): DataDAO

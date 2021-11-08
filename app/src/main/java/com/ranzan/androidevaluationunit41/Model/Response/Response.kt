@@ -1,16 +1,11 @@
 package com.ranzan.androidevaluationunit41.Model.Response
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "ResponseDB")
+
 data class Response(
     @field:SerializedName("results")
-    @ColumnInfo(name = "ResultItem")
     val results: List<ResultsItem?>? = null,
-
-    @ColumnInfo(name = "info")
     @field:SerializedName("info")
     val info: Info? = null
 )
